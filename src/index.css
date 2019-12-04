@@ -11,7 +11,7 @@ code {
 
 .searchbox {
     display: flex;
-    padding: 0 2%;
+    padding: 0 2rem;
     box-shadow: 3px 3px 3px black;
     justify-content: flex-end;
     align-items: center;
@@ -30,7 +30,7 @@ code {
     justify-content: center;
     align-items: center;
     box-shadow: 3px 3px 3px black;
-    margin: 0 2%;
+    margin: 0 2rem;
 }
 
 .btngo {
@@ -56,7 +56,7 @@ code {
 
 .userCard {
     background: lightskyblue;
-    margin: 2%;
+    margin: 2rem;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -67,13 +67,14 @@ code {
 }
 
 .userCard img {
-    margin: 2%;
+    margin: 2rem;
     border: 0px solid black;
     border-radius: 100%;
+    object-fit: contain;
 }
 
 .userFollowers {
-    padding: 2%;
+    padding: 2rem;
 }
 
 .followers {
@@ -86,15 +87,15 @@ code {
 }
 
 .flwrCard {
+    padding: 1rem;
     background: paleturquoise;
-    margin: 2%;
+    margin: 2rem;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 10vw;
     height: 20vh;
-    contain: content;
     box-shadow: 3px 3px 3px black;
 }
 
@@ -108,6 +109,7 @@ code {
     border: 0px solid black;
     border-radius: 100%;
     height: 10vh;
+    object-fit: contain;
 }
 
 .flwrCard h3 {
@@ -115,7 +117,7 @@ code {
 }
 
 .flwrCard p {
-    margin: 0.1rem;
+    margin: 0 0.1rem;
 }
 
 .calendar {
