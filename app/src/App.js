@@ -28,14 +28,6 @@ class App extends React.Component {
 
     this.setState({
       userName: newUserName
-
-      // userData: {
-
-      //   avatar_url: 'https://clinicforspecialchildren.org/wp-content/uploads/2016/08/avatar-placeholder.gif',
-
-      //   login: '-'
-
-      // }
     });
 
     this.getUserInfo(newUserName);
