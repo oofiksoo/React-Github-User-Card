@@ -1,39 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import axios from "axios";
-class App extends React.Component {
-  state = {
-    userCard: []
-  };
 
-  componentDidMount() {
-    axios.get("https://api.github.com/users/oofiksoo").then(response => {
-      console.log(response);
-      this.setState({ userCard: response.data });
-    });
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState !== this.state.userCard) {
-      console.log("New Data");
-    }
-  }
-  render() {
-    return (
-      <div>
-        <h1> My Usercard: </h1>
-        {
-          <div className="myCard">
-            <img src={this.state.userCard.avatar_url} />
-            <h1> {this.state.userCard.name} </h1>
-            <p>
-              <em> {this.state.userCard.login} </em>
-            </p>
-          </div>
-        }
-      </div>
-    );
-  }
-}
+import ReactDOM from "react-dom";
+
+import "./index.css";
+
+import App from "./App";
+
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+// If you want your app to work offline and load faster, you can change
+
+// unregister() to register() below. Note this comes with some pitfalls.
+
+// Learn more about service workers: https://bit.ly/CRA-PWA
+
+serviceWorker.unregister();
