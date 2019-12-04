@@ -13,19 +13,19 @@ export default props => {
         <SearchForm setUserName={props.setUserName} />
       </div>
       <div className="mainUser">
-        <h1>My Github Usercard:</h1>
+        <h1>{props.userData.login}'s GitHub Usercard:</h1>
         <UserCard userData={props.userData} />
       </div>
       <div class="calendar">
-        <h2>My GitHub Calendar</h2>
+        <h2>{props.userData.login}'s GitHub Calendar:</h2>
 
         <img
-          src="http://ghchart.rshah.org/oofiksoo"
-          alt="oofiksoo's Github chart"
+          src={`http://ghchart.rshah.org/${props.userData.login}`}
+          alt={`${props.userData.login}'s Github chart`}
         />
       </div>
       <div className="userFollowers">
-        <h3>My Followers:</h3>
+        <h3>{props.userData.login}'s GitHub Followers:</h3>
         <Followers followers={props.followers} />
       </div>
     </div>
